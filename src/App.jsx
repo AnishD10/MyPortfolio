@@ -1,23 +1,31 @@
 import { useState,React } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+
 
 function App() {
 
 const [color,setColor] = useState("red")
 
 
+const switchColor = () => {  if(color === "red"){
+    setColor("blue")
+  }else{
+    setColor("red")
+  }
+}
+
+
   return(
     <>
-    <div className='main'>
+    <div className={`text-${color}-500`}>
 
     The original color is {color}
+  
 
     <br></br>
 
-    {setColor("blue")} 
+    <button onClick={switchColor}>
+      Change Color
+    </button>
 
     The changed color is {color}
 
