@@ -36,14 +36,32 @@ const ColorBox = () => {
 };
 
 const InitialBox = () => {
+
+  const letters = "SWITCH COLOR".split("");
+  
   return(
 
     <>
-      <div className="bg-red-500 h-50 w-25 mt-50 " style ={{clipPath: "polygon(0 0, 9% 14%, 9% 86%, 0% 100%)"}}>
+      {/* <div className="bg-red-500 h-50 w-25 mt-50" style ={{clipPath: "polygon(0 0, 9% 14%, 9% 86%, 0% 100%)"}}> */}
+       
 
-        <></>
-        
-      </div>
+
+    <div
+      className="bg-red-500 h-50 w-25 mt-50 hover:bg-gray-500 h-100 w-120 mt-50"
+      style={{
+        clipPath: "polygon(0 0, 9% 14%, 9% 86%, 0% 100%)",
+      }}
+    >
+      <h2 className="flex flex-col justify-center p-3 w-full h-full ">
+        {letters.map((letter, index) => (
+          <p key={index}>
+            {letter === " " ? "\u00A0" : letter}
+          </p>
+        ))}
+      </h2>
+    </div>
+  
+
     </>
   )
 }
