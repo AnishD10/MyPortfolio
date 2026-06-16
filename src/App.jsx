@@ -1,12 +1,14 @@
 import { useState,React } from 'react';
-import {ColorBox} from './Components/colorBox';
+import {ColorBox, InitialBox} from './Components/colorBox';
 
 
 function App() {
 
   return(
     <>
-   <ColorBox/>
+    <InitialBox/>
+   {/* <ColorBox/> */}
+  
     </>
   )
 }

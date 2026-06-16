@@ -16,7 +16,7 @@ const ColorBox = () => {
     <div className="flex items-center justify-center h-screen w-full">
       
       <div
-        className="w-125 h-25 border-2 p-10 flex gap-8 items-center justify-center"
+        className="w-20 h-125 border-2 px-15 flex flex-col gap-8 items-center justify-center"
         style={{ borderColor: selectedColor }}
       >
         
@@ -35,4 +35,18 @@ const ColorBox = () => {
   );
 };
 
-export default ColorBox;
+const InitialBox = () => {
+  return(
+
+    <>
+      <div className="bg-red-500 h-50 w-25 mt-50 " style ={{clipPath: "polygon(0 0, 9% 14%, 9% 86%, 0% 100%)"}}>
+
+        <></>
+        
+      </div>
+    </>
+  )
+}
+
+
+export { ColorBox,InitialBox };
